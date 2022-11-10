@@ -11,6 +11,7 @@ class animal
 		int* pExtinct;
 		//void toString();
 		virtual void toString() = 0;
+		virtual animal* replicate() = 0;
 	protected:
 };
 

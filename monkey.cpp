@@ -29,6 +29,12 @@ monkey::~monkey()
 	delete favouriteToy;
 	delete agression;
 }
+animal* monkey::replicate()
+{
+	cout<<endl<<"edgorexebuibwoiuxbtx"<<endl;
+	animal* NewAnimal = new monkey("child",0.8,0.7,*agression,*iq,*favouriteToy);
+	NewAnimal->toString();
+}
 void monkey::toString()
 {
 	cout<<"this is "<<*name<<". "<<*name<<" is a monkey and has IQ = "<<*iq<<endl;
