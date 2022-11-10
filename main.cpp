@@ -27,7 +27,11 @@ int main() {
 	
 	animal* SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
 	MyZoo+=SomeAnimal;
+	SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
+	MyZoo+=SomeAnimal;
 	MyZoo.breed();
+	MyZoo.list_animals();
+	MyZoo-=1;
 	MyZoo.list_animals();
 	/*
 	MyZoo.add_animal();

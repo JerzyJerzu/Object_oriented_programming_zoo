@@ -6,12 +6,6 @@
 
 using namespace std;
 
-void zoo::add_animal()
-{
-	animal* SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
-	animals.push_back(SomeAnimal);	
-}
-
 void zoo::breed()
 {
 	animal* SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
@@ -20,14 +14,15 @@ void zoo::breed()
 
 void zoo::operator+=(animal* animal_to_add)
 {
-	
-	//animal* SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
 	animals.push_back(animal_to_add);
 }
 
 void zoo::operator-=(int index)
 {
 	//how to remove some specific element from a vector???
+	cout<<animals.at(index)<<" has died"<<endl;
+	delete animals.at(index);
+	animals.erase(animals.begin()+index);
 	return;
 }
 
