@@ -31,9 +31,11 @@ monkey::~monkey()
 }
 animal* monkey::replicate()
 {
-	cout<<endl<<"edgorexebuibwoiuxbtx"<<endl;
+	cout<<"replicating"<<endl;
 	animal* NewAnimal = new monkey("child",0.8,0.7,*agression,*iq,*favouriteToy);
-	NewAnimal->toString();
+	//cout<<endl<<NewAnimal<<endl;
+	//NewAnimal->toString();
+	return NewAnimal;
 }
 void monkey::toString()
 {
