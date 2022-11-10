@@ -27,10 +27,18 @@ int main()
 	MyZoo+=SomeAnimal;
 	SomeAnimal = new monkey("ADAM",5,90,140,980,"rsdrttrdtrtdh");
 	MyZoo+=SomeAnimal;
+	
+	cout<<endl<<"listing:"<<endl;
+	MyZoo.list_animals();
+	
+	cout<<endl<<"breeding:"<<endl;
+	MyZoo.breed();
+	/*
 	MyZoo.replication(2);
 	cout<<endl<<"listing:"<<endl;
 	MyZoo.list_animals();
-	MyZoo-=1;
+	MyZoo-=1;*/
+	cout<<endl<<"listing:"<<endl;
 	MyZoo.list_animals();
 	
 	return 0;
