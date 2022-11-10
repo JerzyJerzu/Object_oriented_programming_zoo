@@ -13,6 +13,8 @@
 
 //REMEBER DYNAMIC CAST
 
+//change
+
 template <class animalType>
 animalType* copyType(animalType* A)
 {
@@ -27,11 +29,21 @@ int main() {
 	
 	animal* SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
 	MyZoo+=SomeAnimal;
+	//SomeAnimal->replicate();
+	animal* newchild = SomeAnimal->replicate();
+	cout<<newchild;
+	/*
+	cout<<"-------";
+	newchild->toString();
+	cout<<"-------";
+	*/
+	MyZoo+=SomeAnimal->replicate();
 	SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
 	MyZoo+=SomeAnimal;
 	MyZoo.breed();
+	cout<<endl<<"listing:"<<endl;
 	MyZoo.list_animals();
-	MyZoo-=1;
+	MyZoo-=2;
 	MyZoo.list_animals();
 	/*
 	MyZoo.add_animal();
