@@ -22,7 +22,7 @@ int main()
 	animal* OtherAnimal = new monkey("EWA",0.5,0.9,140,980,"rtdh");
 	MyZoo+=SomeAnimal;
 	MyZoo+=SomeAnimal->replicate(OtherAnimal);
-	MyZoo+=SomeAnimal->replicate(OtherAnimal);
+	MyZoo+=OtherAnimal->replicate(SomeAnimal);
 	cout<<endl<<"listing:"<<endl;
 	MyZoo.list_animals();
 	MyZoo-=1;

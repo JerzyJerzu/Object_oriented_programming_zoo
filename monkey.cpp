@@ -32,7 +32,11 @@ monkey::~monkey()
 animal* monkey::replicate(animal* wife)
 {
 	cout<<"replicating"<<endl;
-	animal* NewAnimal = new monkey("child",0.8,0.7,*agression,*iq,*favouriteToy);
+	/*
+	wife_name = 
+	wife_pBreed = 
+	wife_pExtinct = */
+	animal* NewAnimal = new monkey(*wife->name,*wife->pBreed,*wife->pExtinct,*agression,*iq,*favouriteToy);
 	//cout<<endl<<NewAnimal<<endl;
 	//NewAnimal->toString();
 	return NewAnimal;
