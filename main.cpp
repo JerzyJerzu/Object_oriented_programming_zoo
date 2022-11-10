@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <time.h>
 #include "animal.h"
 #include "mammal.h"
 #include "monkey.h"
@@ -15,14 +16,16 @@ using namespace std;
 
 int main()
 {
+	srand(time(0));
+	
 	cout<<"hello"<<endl;
 	zoo MyZoo;
 	
-	animal* SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
+	animal* SomeAnimal = new monkey("TOM",8,7,150,80,"cat");
 	MyZoo+=SomeAnimal;
-	SomeAnimal = new monkey("EWA",0.5,0.9,140,980,"rtdh");
+	SomeAnimal = new monkey("EWA",50,9,140,980,"rtdh");
 	MyZoo+=SomeAnimal;
-	SomeAnimal = new monkey("ADAM",0.5,0.9,140,980,"rsdrttrdtrtdh");
+	SomeAnimal = new monkey("ADAM",5,90,140,980,"rsdrttrdtrtdh");
 	MyZoo+=SomeAnimal;
 	MyZoo.replication(2);
 	cout<<endl<<"listing:"<<endl;

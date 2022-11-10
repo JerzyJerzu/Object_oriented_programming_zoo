@@ -1,6 +1,6 @@
 #ifndef ZOO_H
 #define ZOO_H
-#include "animal.h"		//at first it didn't compile without animal.h
+#include "animal.h"		//at first it didn't compile without animal.h, but later it did
 
 class zoo
 {
