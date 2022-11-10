@@ -12,7 +12,7 @@ class monkey : public mammal
 		monkey(string NAME, int PBREED, int PEXTINCT, int numericalOrderArg, int numericalSpieceArg, string characterSpieceArg);
 		//monkey(int numericalSpieceArg, string characterSpieceArg);
 		~monkey();
-		animal* replicate();
+		animal* replicate(animal* wife);
 		void toString();
 	protected:
 };

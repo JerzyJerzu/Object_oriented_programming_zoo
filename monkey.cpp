@@ -29,7 +29,7 @@ monkey::~monkey()
 	delete favouriteToy;
 	delete agression;
 }
-animal* monkey::replicate()
+animal* monkey::replicate(animal* wife)
 {
 	cout<<"replicating"<<endl;
 	animal* NewAnimal = new monkey("child",0.8,0.7,*agression,*iq,*favouriteToy);
