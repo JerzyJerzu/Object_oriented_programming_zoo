@@ -12,6 +12,7 @@ class zoo
 		void operator-=(int index);
 		void list_animals();
 		void replication(int index);
+		static int probability();
 	protected:
 };
 

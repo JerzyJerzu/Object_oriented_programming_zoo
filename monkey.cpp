@@ -44,5 +44,5 @@ animal* monkey::replicate(animal* wife)
 void monkey::toString()
 {
 	cout<<"this is "<<*name<<". "<<*name<<" is a monkey and has IQ = "<<*iq<<endl;
-	cout<<"His favourite toy is: "<<*favouriteToy<<", and his agression = "<<*agression<<endl<<endl;
+	cout<<"His favourite toy is: "<<*favouriteToy<<", and his agression = "<<*agression<<endl;
 }

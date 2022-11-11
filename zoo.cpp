@@ -7,16 +7,22 @@
 
 using namespace std;
 
+int zoo::probability()
+{
+	return rand()%100;
+}
 void zoo::breed()
 {
-	int size = animals.size();
+	static int size = animals.size();
+	cout<<"-------------Breeding:----------------";
 	for(int i=0;i<size;i++)
 	{
+		cout<<"-------------------"<<endl;
 		cout<<animals.at(i)<<endl;
 		animals.at(i)->toString();
 		
-		int chance_extinct = rand()%100;
-		int chance_breed = rand()%100; 
+		int chance_extinct = zoo::probability();
+		int chance_breed = zoo::probability(); 
 		
 		if((chance_breed > *animals.at(i)->pBreed)&&(size>1))
 		{
@@ -55,9 +61,11 @@ void zoo::operator-=(int index)
 
 void zoo::list_animals()
 {
+	cout<<"-------------listing:----------------";
 	int size = animals.size();
 	for(int i=0;i<size;i++)
 	{
+		cout<<"-------------------"<<endl;
 		cout<<animals.at(i)<<endl;
 		animals.at(i)->toString();
 	}
