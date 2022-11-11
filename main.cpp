@@ -35,19 +35,40 @@ animal* animal_randomizer()
 	}
 	if(choice == 1)
 	{
+		string WORDS[] = {"Pneumonoultramicroscopicsilicovolcanoconiosis","Life is miserable, meanigless and ends with unevitable death","Life is wonderfull, meanigless and ends with unevitable death"};
+		int WORDS_size = sizeof(WORDS)/sizeof(string);
+		string word = WORDS[rand()%WORDS_size];
+		int iq = 2*zoo::probability();
+		int wings_size = zoo::probability();
+		return new parrot(name,pBreed,pExtinct,wings_size,iq,word);
 	}
 	if(choice == 2)
 	{
+		string COLORS[] = {"cyan","magneta","yellow","black"};
+		int COLORS_size = sizeof(COLORS)/sizeof(string);
+		string color = COLORS[rand()%COLORS_size];
+		int sight = zoo::probability();
+		int wings_size = zoo::probability();
+		return new eagle(name,pBreed,pExtinct,wings_size,sight,color);
 	}
 	if(choice == 3)
 	{
+		string RACES[] = {"flying rainbow pony","unicorn","white horse of conquer","red horse of war","black horse of famine","pale horse of death"};
+		int RACES_size = sizeof(RACES)/sizeof(string);
+		string race = RACES[rand()%RACES_size];
+		int speed = zoo::probability();
+		int agression = zoo::probability();
+		return new horse(name,pBreed,pExtinct,agression,speed,race);
 	}
 	if(choice == 4)
 	{
+		string COLORS[] = {"cyan","magneta","yellow","black"};
+		int COLORS_size = sizeof(COLORS)/sizeof(string);
+		string color = COLORS[rand()%COLORS_size];
+		int cuteness = zoo::probability();
+		int agression = zoo::probability();
+		return new panda(name,pBreed,pExtinct,agression,cuteness,color);
 	}
-	if(choice == 5)
-	{
-	}	
 }
 int main()
 {
