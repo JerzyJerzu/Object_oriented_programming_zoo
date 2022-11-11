@@ -13,6 +13,7 @@ class zoo
 		void list_animals();
 		void replication(int index);
 		static int probability();
+		int get_size();
 	protected:
 };
 

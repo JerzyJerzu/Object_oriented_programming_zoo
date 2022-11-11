@@ -53,25 +53,24 @@ int main()
 {
 	srand(time(0));
 	
+	int noAnimals;
 	cout<<"hello"<<endl;
+	cout<<"how many animals do you want in a zoo? ";
+	cin>>noAnimals;
 	zoo MyZoo;
-	
-	MyZoo+=animal_randomizer();
-	MyZoo+=animal_randomizer();
-	MyZoo+=animal_randomizer();
-	/*
-	animal* SomeAnimal = new monkey("TOM",8,7,150,80,"cat");
-	MyZoo+=SomeAnimal;
-	SomeAnimal = new monkey("EWA",50,9,140,980,"rtdh");
-	MyZoo+=SomeAnimal;
-	SomeAnimal = new monkey("ADAM",5,90,140,980,"rsdrttrdtrtdh");
-	MyZoo+=SomeAnimal;*/
+	for(int i=0;i<noAnimals;i++)
+	{
+		MyZoo+=animal_randomizer();
+	}
 	
 	MyZoo.list_animals();
 	
-	MyZoo.breed();
-	
-	MyZoo.list_animals();
-	
+	int size_of_zoo = MyZoo.get_size();
+	while((size_of_zoo<100)&&size_of_zoo>1)
+	{
+		//cout<<endl<<"************"<<endl<<"size_of_zoo = "<<size_of_zoo<<endl<<"************"<<endl;
+		MyZoo.breed();
+		size_of_zoo = MyZoo.get_size();
+	}
 	return 0;
 }

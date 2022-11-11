@@ -11,10 +11,15 @@ int zoo::probability()
 {
 	return rand()%100;
 }
+int zoo::get_size()
+{
+	cout<<"size = "<<animals.size()<<endl;
+	return animals.size();
+}
 void zoo::breed()
 {
-	static int size = animals.size();
-	cout<<"-------------Breeding:----------------";
+	int size = animals.size();
+	cout<<"-------------Breeding:----------------size = "<<size;
 	for(int i=0;i<size;i++)
 	{
 		cout<<"-------------------"<<endl;
