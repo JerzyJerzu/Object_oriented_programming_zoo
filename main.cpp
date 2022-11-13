@@ -2,16 +2,13 @@
 #include <time.h>
 #include "animal.h"
 #include "mammal.h"
+/*#include "bird.h"
+#include "panda.h"
+#include "parrot.h"
+#include "eagle.h"*/
+//#include "horse.h"
 #include "monkey.h"
 #include "zoo.h"
-
-/*
-#include "bird.h"
-#include "panda.h"
-#include "horse.h"
-#include "parrot.h"
-#include "eagle.h"
-*/
 
 using namespace std;
 
@@ -27,13 +24,13 @@ animal* animal_randomizer()
 	
 	if(choice == 0)
 	{
-		string TOYS[] = {"AK-47","cigarettes","Holy hand granade","teddy bear", "antimatter teddy bear", "portable mini nuclear fusion reactor","one ring to rule them all","sword of destiny"};
+		string TOYS[] = {"AK-47","cigarettes","Holy hand granade","teddy bear", "antimatter teddy bear", "portable, mini nuclear fusion reactor","one ring to rule them all","sword of destiny"};
 		int TOYS_size = sizeof(TOYS)/sizeof(string);
 		string toy = TOYS[rand()%TOYS_size];
 		int iq = 2*zoo::probability();
 		int agression = zoo::probability();
 		return new monkey(name,pBreed,pExtinct,agression,iq,toy);
-	}
+	}/*
 	if(choice == 1)
 	{
 		string WORDS[] = {"Pneumonoultramicroscopicsilicovolcanoconiosis","Life is miserable, meanigless and ends with unevitable death","Life is wonderfull, meanigless and ends with unevitable death"};
@@ -60,7 +57,7 @@ animal* animal_randomizer()
 		int speed = zoo::probability();
 		int agression = zoo::probability();
 		return new horse(name,pBreed,pExtinct,agression,speed,race);
-	}
+	}/*
 	if(choice == 4)
 	{
 		string COLORS[] = {"cyan","magneta","yellow","black"};
@@ -69,7 +66,7 @@ animal* animal_randomizer()
 		int cuteness = zoo::probability();
 		int agression = zoo::probability();
 		return new panda(name,pBreed,pExtinct,agression,cuteness,color);
-	}
+	}*/
 }
 int main()
 {

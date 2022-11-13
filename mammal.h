@@ -9,7 +9,7 @@ class mammal : public animal
 {
 	public:
 	protected:
-		int* agression;
+		int agression;
 };
 
 #endif

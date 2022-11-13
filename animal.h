@@ -12,9 +12,9 @@ class animal
 		string get_name();
 		int get_pExtinct();
 		int get_pBreed();*/
-		string* name;
-		int* pBreed;
-		int* pExtinct;
+		string name;
+		int pBreed;
+		int pExtinct;
 	protected:
 };
 

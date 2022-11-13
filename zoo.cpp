@@ -29,7 +29,7 @@ void zoo::breed()
 		int chance_extinct = zoo::probability();
 		int chance_breed = zoo::probability(); 
 		
-		if((chance_breed > *animals.at(i)->pBreed)&&(size>1))
+		if((chance_breed > animals.at(i)->pBreed)&&(size>1))
 		{
 			int index = i;
 			int wife_index = rand()%size;
@@ -40,10 +40,10 @@ void zoo::breed()
 			*this+=animals.at(index)->replicate(animals.at(wife_index));
 			*this+=animals.at(wife_index)->replicate(animals.at(index));
 			
-			cout<<*animals.at(index)->name<<" and "<<*animals.at(wife_index)->name<<" have now children"<<endl;
+			cout<<animals.at(index)->name<<" and "<<animals.at(wife_index)->name<<" have now children"<<endl;
 		}
 		
-		if(chance_extinct > *animals.at(i)->pExtinct)
+		if(chance_extinct > animals.at(i)->pExtinct)
 		{
 			*this-=i;
 			size--;
@@ -59,7 +59,7 @@ void zoo::operator+=(animal* animal_to_add)
 
 void zoo::operator-=(int index)
 {
-	cout<<*animals.at(index)->name<<" has just died"<<endl;
+	cout<<animals.at(index)->name<<" has just died"<<endl;
 	delete animals.at(index);
 	animals.erase(animals.begin()+index);
 }

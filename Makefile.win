@@ -1,15 +1,15 @@
-# Project: zooTest
+# Project: Project1
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o monkey.o zoo.o
-LINKOBJ  = main.o monkey.o zoo.o
+OBJ      = main.o animal.o mammal.o monkey.o zoo.o
+LINKOBJ  = main.o animal.o mammal.o monkey.o zoo.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = zooTest.exe
+BIN      = zoo-final.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -26,6 +26,12 @@ $(BIN): $(OBJ)
 
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+animal.o: animal.cpp
+	$(CPP) -c animal.cpp -o animal.o $(CXXFLAGS)
+
+mammal.o: mammal.cpp
+	$(CPP) -c mammal.cpp -o mammal.o $(CXXFLAGS)
 
 monkey.o: monkey.cpp
 	$(CPP) -c monkey.cpp -o monkey.o $(CXXFLAGS)
