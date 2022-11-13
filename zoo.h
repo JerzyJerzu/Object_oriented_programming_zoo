@@ -11,6 +11,7 @@ class zoo
 		void operator+=(animal* animal_to_add);
 		void operator-=(int index);
 		void list_animals();
+		void replication(int index);
 	protected:
 };
 

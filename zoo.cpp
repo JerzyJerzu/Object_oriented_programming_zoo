@@ -12,6 +12,14 @@ void zoo::breed()
 	*this+=SomeAnimal;
 }
 
+void zoo::replication(int index)
+{
+	//add randomization
+	int wife_index = 1;
+	*this+=animals.at(index)->replicate(animals.at(wife_index));
+	*this+=animals.at(wife_index)->replicate(animals.at(index));
+}
+
 void zoo::operator+=(animal* animal_to_add)
 {
 	animals.push_back(animal_to_add);

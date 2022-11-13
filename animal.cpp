@@ -14,16 +14,16 @@ void animal::toString()
 {
 	cout<<"in class animal";
 }
-*/
-string get_name()
+string animal::get_name()
 {
 	return *name;	
 }
-int get_pExtinct()
+int animal::get_pExtinct()
 {
 	return *pExtinct;
 }
-int get_pBreed()
+int animal::get_pBreed()
 {
 	return *pBreed;
 }
+*/

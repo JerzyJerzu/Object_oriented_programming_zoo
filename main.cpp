@@ -19,10 +19,12 @@ int main()
 	zoo MyZoo;
 	
 	animal* SomeAnimal = new monkey("TOM",0.8,0.7,150,80,"cat");
-	animal* OtherAnimal = new monkey("EWA",0.5,0.9,140,980,"rtdh");
 	MyZoo+=SomeAnimal;
-	MyZoo+=SomeAnimal->replicate(OtherAnimal);
-	MyZoo+=SomeAnimal->replicate(OtherAnimal);
+	SomeAnimal = new monkey("EWA",0.5,0.9,140,980,"rtdh");
+	MyZoo+=SomeAnimal;
+	SomeAnimal = new monkey("ADAM",0.5,0.9,140,980,"rsdrttrdtrtdh");
+	MyZoo+=SomeAnimal;
+	MyZoo.replication(2);
 	cout<<endl<<"listing:"<<endl;
 	MyZoo.list_animals();
 	MyZoo-=1;
