@@ -6,15 +6,17 @@ using namespace std;
 class animal
 {
 	public:
+		animal(string NAME, int PBREED, int PEXTINCT);
+		virtual ~animal();
 		virtual void toString() = 0;
 		virtual animal* replicate(animal* wife) = 0;
 		/*
 		string get_name();
 		int get_pExtinct();
 		int get_pBreed();*/
-		string* name;
-		int* pBreed;
-		int* pExtinct;
+		string name;
+		int pBreed;
+		int pExtinct;
 	protected:
 };
 

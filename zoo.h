@@ -1,6 +1,6 @@
 #ifndef ZOO_H
 #define ZOO_H
-#include "animal.h"		//at first it didn't compile without animal.h
+#include "animal.h"		//at first it didn't compile without animal.h, but later it did
 
 class zoo
 {
@@ -12,6 +12,8 @@ class zoo
 		void operator-=(int index);
 		void list_animals();
 		void replication(int index);
+		static int probability();
+		int get_size();
 	protected:
 };
 

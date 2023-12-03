@@ -3,46 +3,24 @@
 
 using namespace std;
 
-monkey::monkey(string NAME, int PBREED, int PEXTINCT, int numericalOrderArg, int numericalSpieceArg, string characterSpieceArg)
+monkey::monkey(string NAME, int PBREED, int PEXTINCT, int numericalOrderArg, int numericalSpieceArg, string characterSpieceArg):mammal(numericalOrderArg,NAME,PBREED,PEXTINCT)
 {
-	name = new string;
-	pBreed = new int;
-	pExtinct = new int;
-	*name = NAME;
-	*pBreed = PBREED;
-	*pExtinct = PEXTINCT;
-	
-	iq = new int;
-	favouriteToy = new string;
-	agression = new int;
-	*agression = numericalOrderArg;
-	*iq = numericalSpieceArg;
-	*favouriteToy = characterSpieceArg;
+	iq = numericalSpieceArg;
+	favouriteToy = characterSpieceArg;
 }
 
 monkey::~monkey()
 {
-	delete name;
-	delete pExtinct;
-	delete pBreed;
-	delete iq;
-	delete favouriteToy;
-	delete agression;
+	//cout<<"monkey destructor"<<endl;
 }
 animal* monkey::replicate(animal* wife)
 {
-	cout<<"replicating"<<endl;
-	/*
-	wife_name = 
-	wife_pBreed = 
-	wife_pExtinct = */
-	animal* NewAnimal = new monkey(*wife->name,*wife->pBreed,*wife->pExtinct,*agression,*iq,*favouriteToy);
-	//cout<<endl<<NewAnimal<<endl;
-	//NewAnimal->toString();
+	//cout<<"replicating"<<endl;
+	animal* NewAnimal = new monkey(wife->name,wife->pBreed,wife->pExtinct,agression,iq,favouriteToy);
 	return NewAnimal;
 }
 void monkey::toString()
 {
-	cout<<"this is "<<*name<<". "<<*name<<" is a monkey and has IQ = "<<*iq<<endl;
-	cout<<"His favourite toy is: "<<*favouriteToy<<", and his agression = "<<*agression<<endl<<endl;
+	cout<<"this is "<<name<<". "<<name<<" is a monkey and has IQ = "<<iq<<endl;
+	cout<<"His favourite toy is: "<<favouriteToy<<", and his agression = "<<agression<<endl;
 }

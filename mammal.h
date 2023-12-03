@@ -8,8 +8,10 @@
 class mammal : public animal
 {
 	public:
+		mammal(int numericalOrderArg,string NAME, int PBREED, int PEXTINCT);
+		virtual ~mammal();
 	protected:
-		int* agression;
+		int agression;
 };
 
 #endif
